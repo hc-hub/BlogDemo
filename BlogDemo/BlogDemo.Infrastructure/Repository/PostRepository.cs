@@ -4,6 +4,7 @@ using BlogDemo.Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,9 +18,15 @@ namespace BlogDemo.Infrastructure.Repository
         {
             this._myContext = myContext;
         }
-        public async Task<IEnumerable<Post>> GetAllPostsAsync()
+        public async Task<PaginatedList<Post>> GetAllPostsAsync(PostParameters postParameters)
         {
-            return await _myContext.Posts.ToListAsync();
+            var query = _myContext.Posts.OrderBy(x => x.Id);
+            var Count = await query.CountAsync();
+            var data=await query
+                .Skip(postParameters.PageIndex*postParameters.PageSize)
+                .Take(postParameters.PageSize)
+                .ToListAsync();
+            return new PaginatedList<Post>(postParameters.PageIndex,postParameters.PageSize,Count,data);
         }
 
         public async Task<Post> GetPostByIdAsync(int id)
