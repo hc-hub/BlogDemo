@@ -9,7 +9,7 @@ namespace BlogDemo.Infrastructure.Database
 
         public UnitOfWork(MyContext myContext)
         {
-            this._myContext = myContext;
+            _myContext = myContext;
         }
         public async Task<bool> SaveAsync()
         {
