@@ -1,0 +1,12 @@
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\bin\Debug\netcoreapp2.2\BlogDemo.Infrastructure.deps.json
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\bin\Debug\netcoreapp2.2\BlogDemo.Infrastructure.dll
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\bin\Debug\netcoreapp2.2\BlogDemo.Infrastructure.pdb
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\bin\Debug\netcoreapp2.2\BlogDemo.Core.dll
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\bin\Debug\netcoreapp2.2\BlogDemo.Core.pdb
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.csprojAssemblyReference.cache
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.csproj.CoreCompileInputs.cache
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.AssemblyInfoInputs.cache
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.AssemblyInfo.cs
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.csproj.CopyComplete
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.dll
+E:\vs2017项目\BlogDemo\BlogDemo.Infrastructure\obj\Debug\netcoreapp2.2\BlogDemo.Infrastructure.pdb
