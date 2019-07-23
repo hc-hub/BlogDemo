@@ -1,0 +1,496 @@
+2019-07-11 10:07:17.960 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:07:18.610 +08:00 [INF] Executed DbCommand (59ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:07:18.642 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-11 10:07:18.929 +08:00 [INF] User profile is available. Using 'C:\Users\LXR-YFB\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-11 10:07:21.093 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 10:07:22.479 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2019-07-11 10:07:22.604 +08:00 [INF] Request finished in 138.6433ms 307 
+2019-07-11 10:07:22.663 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2019-07-11 10:07:23.015 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:07:24.469 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:07:24.762 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:07:24.938 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:07:25.110 +08:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:07:25.162 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-07-11 10:07:25.211 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:07:25.253 +08:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:07:25.724 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1162.6766ms.
+2019-07-11 10:07:25.779 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:07:25.828 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 2789.143ms
+2019-07-11 10:07:25.863 +08:00 [INF] Request finished in 3199.7805ms 200 application/json; charset=utf-8
+2019-07-11 10:07:27.146 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/favicon.ico  
+2019-07-11 10:07:27.153 +08:00 [INF] Request finished in 7.2059ms 404 
+2019-07-11 10:07:52.290 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?Orderby=Id%20desc  
+2019-07-11 10:07:52.313 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:07:52.372 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:07:52.379 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:07:53.124 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:07:53.155 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:07:53.245 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:07:53.299 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:07:53.310 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 934.3491ms.
+2019-07-11 10:07:53.312 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:07:53.314 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 998.4017ms
+2019-07-11 10:07:53.316 +08:00 [INF] Request finished in 1026.4895ms 200 application/json; charset=utf-8
+2019-07-11 10:08:44.126 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:08:44.161 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:08:44.203 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:08:44.210 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:08:44.216 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:08:44.262 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:08:44.275 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:08:44.281 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:08:44.298 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 88.606400000000008ms.
+2019-07-11 10:08:44.311 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:08:44.317 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 152.536ms
+2019-07-11 10:08:44.477 +08:00 [INF] Request finished in 351.1257ms 200 application/json; charset=utf-8
+2019-07-11 10:08:49.415 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:08:49.426 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:08:49.466 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:08:49.480 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:08:49.483 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:08:49.492 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:08:49.500 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:08:49.511 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:08:49.516 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36.1839ms.
+2019-07-11 10:08:49.528 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:08:49.530 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 97.740800000000007ms
+2019-07-11 10:08:49.592 +08:00 [INF] Request finished in 176.5515ms 200 application/json; charset=utf-8
+2019-07-11 10:08:56.561 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:08:56.564 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:08:56.599 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:08:56.612 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:08:56.615 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:08:56.621 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:08:56.629 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:08:56.639 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:08:56.649 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 36.722500000000004ms.
+2019-07-11 10:08:56.651 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:08:56.654 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 87.1332ms
+2019-07-11 10:08:56.709 +08:00 [INF] Request finished in 147.7319ms 200 application/json; charset=utf-8
+2019-07-11 10:09:20.474 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 10:09:20.554 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:09:20.557 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:09:20.584 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:09:20.588 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:09:20.591 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:09:20.596 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:09:20.601 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:09:20.607 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:09:20.611 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22.895300000000002ms.
+2019-07-11 10:09:20.617 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:09:20.620 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 61.2471ms
+2019-07-11 10:09:20.626 +08:00 [INF] Request finished in 71.5564ms 200 application/json; charset=utf-8
+2019-07-11 10:09:28.451 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10  
+2019-07-11 10:09:28.459 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:09:28.491 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:09:28.496 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:09:28.499 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:09:28.507 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:09:28.513 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:09:28.517 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:09:28.526 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 30.9771ms.
+2019-07-11 10:09:28.529 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:09:28.532 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 69.1217ms
+2019-07-11 10:09:28.537 +08:00 [INF] Request finished in 86.1907ms 200 application/json; charset=utf-8
+2019-07-11 10:09:39.960 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:09:39.963 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:09:40.005 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:09:40.010 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:09:40.013 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:09:40.026 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:09:40.032 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:09:40.039 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:09:40.045 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 35.1304ms.
+2019-07-11 10:09:40.050 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:09:40.054 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 89.3177ms
+2019-07-11 10:09:40.061 +08:00 [INF] Request finished in 101.4423ms 200 application/json; charset=utf-8
+2019-07-11 10:10:20.691 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:10:20.695 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:10:20.741 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:10:20.745 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:10:20.748 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:10:20.755 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:10:20.759 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:10:20.763 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+ORDER BY "p"."Id" DESC
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:10:20.769 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 25.1993ms.
+2019-07-11 10:10:20.775 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:10:20.777 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 80.353000000000009ms
+2019-07-11 10:10:20.779 +08:00 [INF] Request finished in 88.576ms 200 application/json; charset=utf-8
+2019-07-11 10:14:36.825 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:14:37.114 +08:00 [INF] Executed DbCommand (28ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:14:37.134 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-11 10:14:37.235 +08:00 [INF] User profile is available. Using 'C:\Users\LXR-YFB\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-11 10:14:37.927 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 10:14:38.950 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2019-07-11 10:14:39.051 +08:00 [INF] Request finished in 101.2617ms 307 
+2019-07-11 10:14:39.149 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2019-07-11 10:14:39.289 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:14:40.165 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:14:40.186 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:14:40.261 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:14:40.273 +08:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:14:40.309 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-07-11 10:14:40.332 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:14:40.351 +08:00 [INF] Executed DbCommand (6ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:14:40.478 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 295.5287ms.
+2019-07-11 10:14:40.491 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:14:40.522 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 1219.94ms
+2019-07-11 10:14:40.530 +08:00 [INF] Request finished in 1380.4628ms 200 application/json; charset=utf-8
+2019-07-11 10:14:50.201 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 10:14:50.242 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id%20desc  
+2019-07-11 10:14:50.417 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:14:50.759 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:14:50.766 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:14:50.772 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:14:50.776 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:14:51.039 +08:00 [WRN] Query: '(from Post <generated>_3 in DbSet<Post> select [<generated>_3]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-07-11 10:14:51.064 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:14:51.080 +08:00 [INF] Executed DbCommand (12ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."Author", "t"."Body", "t"."LastModified", "t"."Remark", "t"."Title"
+FROM (
+    SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+    FROM "Posts" AS "p"
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+ORDER BY "t"."Id" DESC
+2019-07-11 10:14:51.103 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 338.2114ms.
+2019-07-11 10:14:51.106 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:14:51.107 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 376.4898ms
+2019-07-11 10:14:51.110 +08:00 [INF] Request finished in 868.1117ms 200 application/json; charset=utf-8
+2019-07-11 10:15:10.222 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id.body%20desc  
+2019-07-11 10:15:10.243 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:15:10.286 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:15:10.290 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:15:10.293 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:15:10.300 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:15:11.073 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 814.5787ms
+2019-07-11 10:15:11.080 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Key mapping for Id.body is missing
+   at BlogDemo.Infrastructure.Extensions.QueryableExtensions.ApplySort[T](IQueryable`1 source, String orderBy, IPropertyMapping propertyMapping) in E:\vs2017项目\BlogDemo\BlogDemo\BlogDemo.Infrastructure\Extensions\QueryableExtensions.cs:line 50
+   at BlogDemo.Infrastructure.Repository.PostRepository.GetAllPostsAsync(PostParameters postParameters) in E:\vs2017项目\BlogDemo\BlogDemo\BlogDemo.Infrastructure\Repository\PostRepository.cs:line 37
+   at BlogDemo.Api.Controllers.PostController.Get(PostParameters queryParameters) in E:\vs2017项目\BlogDemo\BlogDemo\BlogDemo.Api\Controllers\PostController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-11 10:15:11.304 +08:00 [INF] Request finished in 1081.7911ms 500 text/html; charset=utf-8
+2019-07-11 10:15:19.705 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id.Body%20desc  
+2019-07-11 10:15:19.733 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:15:19.764 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:15:19.771 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:15:19.774 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:15:19.777 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:15:19.995 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 254.8621ms
+2019-07-11 10:15:19.997 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+System.ArgumentException: Key mapping for Id.Body is missing
+   at BlogDemo.Infrastructure.Extensions.QueryableExtensions.ApplySort[T](IQueryable`1 source, String orderBy, IPropertyMapping propertyMapping) in E:\vs2017项目\BlogDemo\BlogDemo\BlogDemo.Infrastructure\Extensions\QueryableExtensions.cs:line 50
+   at BlogDemo.Infrastructure.Repository.PostRepository.GetAllPostsAsync(PostParameters postParameters) in E:\vs2017项目\BlogDemo\BlogDemo\BlogDemo.Infrastructure\Repository\PostRepository.cs:line 37
+   at BlogDemo.Api.Controllers.PostController.Get(PostParameters queryParameters) in E:\vs2017项目\BlogDemo\BlogDemo\BlogDemo.Api\Controllers\PostController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-07-11 10:15:20.017 +08:00 [INF] Request finished in 311.78ms 500 text/html; charset=utf-8
+2019-07-11 10:16:04.213 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id,body%20desc  
+2019-07-11 10:16:04.231 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:16:04.261 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:16:04.265 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:16:04.272 +08:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:16:04.278 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:16:04.288 +08:00 [WRN] Query: '(from Post <generated>_4 in DbSet<Post> select [<generated>_4]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-07-11 10:16:04.295 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:16:04.299 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."Author", "t"."Body", "t"."LastModified", "t"."Remark", "t"."Title"
+FROM (
+    SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+    FROM "Posts" AS "p"
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+ORDER BY "t"."Id", "t"."Body" DESC
+2019-07-11 10:16:04.315 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 50.1634ms.
+2019-07-11 10:16:04.323 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:16:04.343 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 110.2442ms
+2019-07-11 10:16:04.346 +08:00 [INF] Request finished in 133.1632ms 200 application/json; charset=utf-8
+2019-07-11 10:32:37.680 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts?pageIndex=0&pageSize=10&Orderby=Id,body%20desc  
+2019-07-11 10:32:37.685 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 10:32:37.754 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 10:32:37.761 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 10:32:37.773 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:32:37.793 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 10:34:29.214 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-07-11 10:34:29.223 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:34:29.228 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 10:39:50.543 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 10:39:50.560 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."Author", "t"."Body", "t"."LastModified", "t"."Remark", "t"."Title"
+FROM (
+    SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+    FROM "Posts" AS "p"
+    LIMIT @__p_1 OFFSET @__p_0
+) AS "t"
+ORDER BY "t"."Id", "t"."Body" DESC
+2019-07-11 10:40:03.050 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 445288.52660000004ms.
+2019-07-11 10:40:03.059 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 10:40:03.063 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 445347.00690000004ms
+2019-07-11 10:40:03.069 +08:00 [INF] Request finished in 445389.0242ms 200 application/json; charset=utf-8
+2019-07-11 18:56:12.906 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 18:56:13.248 +08:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 18:56:13.265 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-07-11 18:56:13.415 +08:00 [INF] User profile is available. Using 'C:\Users\LXR-YFB\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-07-11 18:56:14.329 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 18:56:14.338 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 18:56:15.870 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/posts  
+2019-07-11 18:56:16.061 +08:00 [INF] Request finished in 200.8493ms 307 
+2019-07-11 18:56:16.874 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2019-07-11 18:56:17.483 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 18:56:18.303 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 18:56:18.327 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 18:56:18.491 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 18:56:18.538 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 18:56:24.371 +08:00 [WRN] Query: '(from Post <generated>_2 in DbSet<Post> select [<generated>_2]).Skip(__p_0).Take(__p_1)' uses a row limiting operation (Skip/Take) without OrderBy which may lead to unpredictable results.
+2019-07-11 18:56:24.411 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 18:56:24.463 +08:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 18:56:24.731 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6416.3791ms.
+2019-07-11 18:56:24.813 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 18:56:24.859 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 7365.7861ms
+2019-07-11 18:56:24.865 +08:00 [INF] Request finished in 7990.9979ms 200 application/json; charset=utf-8
+2019-07-11 18:56:43.133 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-07-11 18:56:43.223 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:5001/api/posts  
+2019-07-11 18:56:43.225 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api)
+2019-07-11 18:56:43.266 +08:00 [INF] Executing action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) with arguments (["BlogDemo.Core.Entities.PostParameters"]) - Validation state: "Valid"
+2019-07-11 18:56:43.324 +08:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-07-11 18:56:43.327 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 18:56:43.330 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Posts" AS "p"
+2019-07-11 18:56:46.740 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-07-11 18:56:46.745 +08:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_1='?', @__p_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+LIMIT @__p_1 OFFSET @__p_0
+2019-07-11 18:56:46.751 +08:00 [INF] Executed action method BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3427.3988ms.
+2019-07-11 18:56:46.769 +08:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[BlogDemo.Infrastructure.Resources.PostResource, BlogDemo.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2019-07-11 18:56:46.779 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 3551.878ms
+2019-07-11 18:56:46.791 +08:00 [INF] Request finished in 3568.1234ms 200 application/json; charset=utf-8
