@@ -9,7 +9,7 @@ namespace BlogDemo.Core.Interfaces
     public interface IPostRepository
     {
         Task<PaginatedList<Post>> GetAllPostsAsync(PostParameters queryParameters);
-        void SavePost(Post post);
         Task<Post> GetPostByIdAsync(int id);
+        void AddPost(Post post);
     }
 }

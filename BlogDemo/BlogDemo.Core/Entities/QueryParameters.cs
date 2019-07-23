@@ -14,11 +14,11 @@ namespace BlogDemo.Core.Entities
             get => _pageIndex;
             set => _pageIndex = value >= 0 ? value : 0;
         }
-        private int _pageSize;
+        private int _pageSize=DefaultPageSize;
         public virtual int PageSize
         {
-            get;
-            set;
+            get => _pageSize;
+            set => _pageSize = value >= 0 ? value : 0;
         }
         private string _orderBy;
         public string OrderBy
@@ -29,8 +29,9 @@ namespace BlogDemo.Core.Entities
         private int _maxPageSize = DefaultMaxPageSize;
         public int MaxPageSize
         {
-            get=>_maxPageSize;
-            set=>MaxPageSize=_maxPageSize;
+            get => _maxPageSize;
+            set => MaxPageSize = _maxPageSize;
         }
+        public string Fields { get; set; }
     }
 }
