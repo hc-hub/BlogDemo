@@ -1,0 +1,156 @@
+2019-08-28 08:45:55.982 +08:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-28 08:45:56.650 +08:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-28 08:45:56.678 +08:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-28 08:45:57.178 +08:00 [INF] User profile is available. Using 'C:\Users\LXR-YFB\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-28 08:45:58.625 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-08-28 08:45:58.626 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.PartialFrameCallback(AsyncProtocolRequest asyncRequest)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Net.Security.SslState.ThrowIfExceptional()
+   at System.Net.Security.SslState.InternalEndProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslState.EndProcessAuthentication(IAsyncResult result)
+   at System.Net.Security.SslStream.EndAuthenticateAsServer(IAsyncResult asyncResult)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_1(IAsyncResult iar)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncCoreLogic(IAsyncResult iar, Func`2 endFunction, Action`1 endAction, Task`1 promise, Boolean requiresSynchronization)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-08-28 08:47:50.087 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:6000/api/posts  
+2019-08-28 08:47:50.132 +08:00 [INF] Request finished in 45.4173ms 307 
+2019-08-28 08:47:50.309 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6000/api/posts  
+2019-08-28 08:47:50.345 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-28 08:47:50.618 +08:00 [ERR] Request matched multiple actions resulting in ambiguity. Matching actions: BlogDemo.Api.Controllers.PostController.CreatePostUri (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPost (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPosts (BlogDemo.Api)
+2019-08-28 08:47:50.650 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+BlogDemo.Api.Controllers.PostController.CreatePostUri (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPost (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPosts (BlogDemo.Api)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-28 08:47:50.764 +08:00 [INF] Request finished in 454.4693ms 500 text/html; charset=utf-8
+2019-08-28 08:52:31.122 +08:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'MyContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2019-08-28 08:52:31.401 +08:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys=ON;
+2019-08-28 08:52:31.425 +08:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Author", "p"."Body", "p"."LastModified", "p"."Remark", "p"."Title"
+FROM "Posts" AS "p"
+2019-08-28 08:52:31.505 +08:00 [INF] User profile is available. Using 'C:\Users\LXR-YFB\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-08-28 08:52:32.069 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-08-28 08:52:32.069 +08:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Authentication failed because the remote party has closed the transport stream.
+   at System.Net.Security.SslState.StartReadFrame(Byte[] buffer, Int32 readBytes, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.StartReceiveBlob(Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ForceAuthentication(Boolean receiveFirst, Byte[] buffer, AsyncProtocolRequest asyncRequest)
+   at System.Net.Security.SslState.ProcessAuthentication(LazyAsyncResult lazyResult)
+   at System.Net.Security.SslStream.BeginAuthenticateAsServer(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken, AsyncCallback asyncCallback, Object asyncState)
+   at System.Net.Security.SslStream.<>c.<AuthenticateAsServerAsync>b__51_0(SslServerAuthenticationOptions arg1, CancellationToken arg2, AsyncCallback callback, Object state)
+   at System.Threading.Tasks.TaskFactory`1.FromAsyncImpl[TArg1,TArg2](Func`5 beginMethod, Func`2 endFunction, Action`1 endAction, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state, TaskCreationOptions creationOptions)
+   at System.Threading.Tasks.TaskFactory.FromAsync[TArg1,TArg2](Func`5 beginMethod, Action`1 endMethod, TArg1 arg1, TArg2 arg2, Object state)
+   at System.Net.Security.SslStream.AuthenticateAsServerAsync(SslServerAuthenticationOptions sslServerAuthenticationOptions, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionAdapter.InnerOnConnectionAsync(ConnectionAdapterContext context)
+2019-08-28 08:52:47.483 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:6000/api/posts  
+2019-08-28 08:52:47.503 +08:00 [INF] Request finished in 20.7544ms 307 
+2019-08-28 08:52:47.597 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6000/api/posts  
+2019-08-28 08:52:47.617 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-28 08:52:47.692 +08:00 [ERR] Request matched multiple actions resulting in ambiguity. Matching actions: BlogDemo.Api.Controllers.PostController.CreatePostUri (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPost (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPosts (BlogDemo.Api)
+2019-08-28 08:52:47.704 +08:00 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Mvc.Internal.AmbiguousActionException: Multiple actions matched. The following actions matched route data and had all constraints satisfied:
+
+BlogDemo.Api.Controllers.PostController.CreatePostUri (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPost (BlogDemo.Api)
+BlogDemo.Api.Controllers.PostController.CreateLinksForPosts (BlogDemo.Api)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionSelector.SelectBestCandidate(RouteContext context, IReadOnlyList`1 candidates)
+   at Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.Tree.TreeRouter.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-08-28 08:52:47.765 +08:00 [INF] Request finished in 167.9885ms 500 text/html; charset=utf-8
+2019-08-28 08:53:54.268 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:53:54.289 +08:00 [INF] Request finished in 21.041ms 307 
+2019-08-28 08:53:54.305 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:53:54.310 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-28 08:53:54.481 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32, System.String) on controller BlogDemo.Api.Controllers.PostController (BlogDemo.Api).
+2019-08-28 08:53:54.539 +08:00 [INF] Authorization failed.
+2019-08-28 08:53:54.541 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-28 08:53:54.548 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-28 08:53:54.845 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-28 08:53:54.850 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-28 08:53:54.872 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 354.97130000000004ms
+2019-08-28 08:53:54.894 +08:00 [INF] Request finished in 588.5572ms 401 
+2019-08-28 08:54:11.351 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:54:11.359 +08:00 [INF] Request finished in 7.7391ms 307 
+2019-08-28 08:54:11.369 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:54:11.390 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-28 08:54:11.391 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32, System.String) on controller BlogDemo.Api.Controllers.PostController (BlogDemo.Api).
+2019-08-28 08:54:11.394 +08:00 [INF] Authorization failed.
+2019-08-28 08:54:11.396 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-28 08:54:11.397 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-28 08:54:11.398 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-28 08:54:11.399 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-28 08:54:11.400 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 7.1021ms
+2019-08-28 08:54:11.402 +08:00 [INF] Request finished in 32.3744ms 401 
+2019-08-28 08:54:55.445 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:54:55.466 +08:00 [INF] Request finished in 21.0761ms 307 
+2019-08-28 08:54:55.500 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:54:55.502 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-28 08:54:55.503 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32, System.String) on controller BlogDemo.Api.Controllers.PostController (BlogDemo.Api).
+2019-08-28 08:54:55.505 +08:00 [INF] Authorization failed.
+2019-08-28 08:54:55.506 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-28 08:54:55.507 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-28 08:54:55.508 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-28 08:54:55.509 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-28 08:54:55.510 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 5.2528000000000006ms
+2019-08-28 08:54:55.511 +08:00 [INF] Request finished in 11.3992ms 401 
+2019-08-28 08:59:34.559 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:59:34.561 +08:00 [INF] Request finished in 2.4724ms 307 
+2019-08-28 08:59:34.585 +08:00 [INF] Request starting HTTP/1.1 GET https://localhost:6000/api/posts/GetPosts  
+2019-08-28 08:59:34.588 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2019-08-28 08:59:34.590 +08:00 [INF] Route matched with {action = "Get", controller = "Post"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get(Int32, System.String) on controller BlogDemo.Api.Controllers.PostController (BlogDemo.Api).
+2019-08-28 08:59:34.592 +08:00 [INF] Authorization failed.
+2019-08-28 08:59:34.593 +08:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2019-08-28 08:59:34.594 +08:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2019-08-28 08:59:34.595 +08:00 [INF] AuthenticationScheme: BearerIdentityServerAuthenticationJwt was challenged.
+2019-08-28 08:59:34.597 +08:00 [INF] AuthenticationScheme: Bearer was challenged.
+2019-08-28 08:59:34.598 +08:00 [INF] Executed action BlogDemo.Api.Controllers.PostController.Get (BlogDemo.Api) in 5.9556000000000004ms
+2019-08-28 08:59:34.599 +08:00 [INF] Request finished in 13.5812ms 401 

@@ -1,0 +1,9 @@
+E:\vs2017项目\BlogDemo\BlogDemo.Core\bin\Debug\netcoreapp2.2\BlogDemo.Core.deps.json
+E:\vs2017项目\BlogDemo\BlogDemo.Core\bin\Debug\netcoreapp2.2\BlogDemo.Core.dll
+E:\vs2017项目\BlogDemo\BlogDemo.Core\bin\Debug\netcoreapp2.2\BlogDemo.Core.pdb
+E:\vs2017项目\BlogDemo\BlogDemo.Core\obj\Debug\netcoreapp2.2\BlogDemo.Core.csprojAssemblyReference.cache
+E:\vs2017项目\BlogDemo\BlogDemo.Core\obj\Debug\netcoreapp2.2\BlogDemo.Core.csproj.CoreCompileInputs.cache
+E:\vs2017项目\BlogDemo\BlogDemo.Core\obj\Debug\netcoreapp2.2\BlogDemo.Core.AssemblyInfoInputs.cache
+E:\vs2017项目\BlogDemo\BlogDemo.Core\obj\Debug\netcoreapp2.2\BlogDemo.Core.AssemblyInfo.cs
+E:\vs2017项目\BlogDemo\BlogDemo.Core\obj\Debug\netcoreapp2.2\BlogDemo.Core.dll
+E:\vs2017项目\BlogDemo\BlogDemo.Core\obj\Debug\netcoreapp2.2\BlogDemo.Core.pdb

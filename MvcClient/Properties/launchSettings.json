@@ -1,0 +1,28 @@
+﻿{
+  //"iisSettings": {
+  //  "windowsAuthentication": false, 
+  //  "anonymousAuthentication": true, 
+  //  "iisExpress": {
+  //    "applicationUrl": "http://localhost:56870",
+  //    "sslPort": 44316
+  //  }
+  //},
+  "profiles": {
+    //"IIS Express": {
+    //  "commandName": "IISExpress",
+    //  "launchBrowser": true,
+    //  "environmentVariables": {
+    //    "ASPNETCORE_ENVIRONMENT": "Development"
+    //  }
+    //},
+    "MvcClient": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:7001",
+      "applicationUrl": "https://localhost:7001;http://localhost:7000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
